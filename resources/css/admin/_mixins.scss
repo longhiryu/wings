@@ -1,0 +1,10 @@
+@import 'variables';
+
+@mixin buttonStyle() {
+    background-color: $bg-light-color;
+    color: $btn-light-color;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+}

@@ -1,0 +1,268 @@
+$sub-color: #8d8d8d;
+$text-color: #8c8c8c;
+body {
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  a:hover {
+    color: $sub-color;
+    text-decoration: none;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .my-button {
+    padding: 7px 9px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: 500;
+    font-size: 0.7rem;
+    line-height: 12px;
+    align-items: center;
+  }
+
+  .my-button i {
+    font-size: 0.6rem;
+    margin-right: 0.3rem;
+  }
+
+  .error-message {
+    font-size: 0.812rem;
+  }
+
+  .size_text{
+    font-size: 0.75rem;
+  }
+
+  form {
+    .form-control {
+      font-size: 0.75rem;
+    }
+
+    .select2-selection{
+      padding: 0 !important;
+      .select2-selection__rendered{
+        font-size: 0.75rem;
+        font-weight: 400;
+      }
+    }
+
+    select{
+      line-height: inherit !important;
+    }
+
+    .form-group {
+      textarea {
+      }
+
+      label {
+        color: $sub-color;
+      }
+    }
+
+    img#view-img {
+      max-width: 70%;
+      max-height: 70%;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      margin: 10px 0 0 10px;
+    }
+
+    .sub-title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      color: #737f8b;
+      margin-bottom: 0;
+    }
+  }
+
+  table.list {
+    th {
+      color: #a3a3a3;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: uppercase;
+      padding-right: 5px;
+      padding-left: 0;
+    }
+    td {
+      padding: 0.5rem !important;
+
+      .title {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        color: #000000;
+        margin-bottom: 5px;
+      }
+
+      .sub-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #737f8b;
+        margin-bottom: 0;
+      }
+
+      .title:hover {
+        color: $sub-color;
+      }
+    }
+  }
+
+  table.modal_view {
+    th {
+      color: #a3a3a3;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: uppercase;
+      padding-right: 5px;
+      padding-left: 0;
+    }
+    td {
+      padding: 1rem 0.5rem !important;
+
+      .title {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        color: #000000;
+        margin-bottom: 5px;
+      }
+
+      .sub-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #737f8b;
+        margin-bottom: 0;
+      }
+
+      .title:hover {
+        color: $sub-color;
+      }
+    }
+  }
+
+  ul.pagination {
+    .page-link {
+      font-size: 0.7rem !important;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .my-button {
+  }
+}
+
+img.lang-img {
+  width: 20px;
+  height: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover:hover {
+  color: $sub-color !important;
+}
+
+.import_product_list {
+  .product_search_list {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 100;
+    padding: 1rem 1rem;
+    ul {
+      li:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+.text_header {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.text_description {
+  font-weight: 400;
+  color: #76838f;
+  font-size: 0.812rem;
+  line-height: 1.3rem;
+}
+
+.text_sub_description {
+  font-weight: 400;
+  color: #76838f;
+  font-size: 0.7rem;
+  line-height: 1.3rem;   
+}
+
+span.error{
+  font-size: 0.75rem;
+}
+
+.addresses_wraper{
+  font-size: 0.8rem;
+}
+
+i.remove_keyword_icon:hover{
+  color: cornflowerblue;
+}
+
+.search-list{
+  border: thin solid #e4e4e4;
+  background-color: #F6F7F8;
+  width: 100%;
+  z-index: 1000 !important;
+  .table th, .table td{
+    padding: 0.8rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+  .search-list-item{
+    border-bottom: thin solid #e4e4e4;
+
+    .code{
+      display: inline-block;
+      width: 22% !important;
+      box-sizing: border-box; /* Đảm bảo chiều rộng bao gồm cả padding và border */
+    }
+  }
+
+  .search-list-item:hover{
+    background-color: #FFF !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+
+.sub-total, .tax-total{
+  font-size: 0.812rem !important;
+}
+
+.grand-total{
+  font-size: 0.9rem !important;
+}
+
+@import 'admin_file.scss';
+@import 'price_ranges.scss';

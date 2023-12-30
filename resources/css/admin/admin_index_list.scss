@@ -1,0 +1,35 @@
+.block {
+    padding: 0.7rem;
+
+    .block-content {
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 1.1rem 2rem;
+        height: 100%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        .block-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.priButton{
+    color: #fff !important;
+    background-color: $priButtonColor !important;
+}
+
+.secColor{
+    color: #fff !important;
+    background-color: $priButtonColor !important;
+}
+
+.click-view{
+    color: $link;
+}
+
+.click-view:hover{
+    color: $link-hover;
+}

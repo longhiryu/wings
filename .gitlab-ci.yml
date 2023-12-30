@@ -1,0 +1,27 @@
+image: lorisleiva/laravel-docker
+
+stages:
+  - deploy
+
+# Template to install openssh client and ssh key
+.initialise_ssh:
+  before_script:
+    # Install the ssh-agent
+    - 'which ssh-agent || (apt-get update -y && apt-get install openssh-client -y)'
+    # Run the ssh-agent
+    - eval $(ssh-agent -s)
+    # Add the SSH key to the ssh-agent
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+# Deploy to production job
+deploy_staging:
+  stage: deploy
+  extends:
+    - .initialise_ssh
+  script:
+    # Checkout master and pull the latest changes
+    - ssh $SSH_USER@$SSH_HOST -p $SSH_PORT "cd $SSH_FOLDER && git checkout main && git pull origin main && sh production_start.sh && exit"
+  only:
+    - main

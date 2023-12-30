@@ -1,0 +1,13 @@
+.setting__logo {
+    .setting__title {
+        p {
+            color: blue;
+        }
+    }
+    .setting__image {
+        img {
+            box-shadow: 0 0 10px 0 black;
+            cursor: pointer;
+        }
+    }
+}

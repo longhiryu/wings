@@ -1,0 +1,32 @@
+.mt-2 {
+	.nav {
+		.nav-item {
+			.nav-link {
+				cursor: pointer;
+				i.permission{
+					font-size: 0.9rem !important;
+					margin-top: 3px !important;
+				}
+			}
+		}
+	}
+}
+
+.nav-treeview {
+	.item-active {
+		background-color: #2d3135 !important;
+		color: white !important;
+	}
+	.nav-item {
+		font-size: 0.9rem !important;
+		margin: auto;
+		border-radius: 3px;
+		overflow: hidden;
+		.nav-icon {
+			font-size: 10pt !important;
+			margin-left: 20px !important;
+			margin-right: 5px !important;
+			width: auto !important;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8088:80"
+    user: "1000:1000"
+    volumes:
+      - .:/var/www/html
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: docker-db
+      DB_USERNAME: long
+      DB_PASSWORD: 123
+      # MAIL_MAILER: smtp
+      # MAIL_HOST: smtp.gmail.com
+      # MAIL_PORT: 587
+      # MAIL_USERNAME: longhiryu@gmail.com
+      # MAIL_PASSWORD: wdxlaelvczvoobhd
+      # MAIL_ENCRYPTION: ssl
+      # MAIL_FROM_ADDRESS: info@geckoso.com
+      # MAIL_FROM_NAME: Safety Culture
+  db:
+    image: mariadb:10.6
+    ports:
+      - "33066:3306"
+    environment:
+      MYSQL_DATABASE: docker-db
+      MYSQL_USER: long
+      MYSQL_PASSWORD: 123
+      MYSQL_ROOT_PASSWORD: root
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8089:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+      UPLOAD_LIMIT: 300M

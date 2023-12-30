@@ -1,0 +1,121 @@
+@import "variables";
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: inherit;
+    &:hover{
+        background: $bg-light-hover-color;
+    }
+}
+.table th, .table td, .table thead th{
+    border: 0;
+    vertical-align: middle;
+}
+
+.table-index-pagination ul.pagination{
+    justify-content: right;
+}
+
+.table-index-search{
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+table.index {
+    margin: auto;
+    text-align: center;
+    
+
+    tbody tr td {
+        vertical-align: middle;
+    }
+    tbody tr:hover{
+        background-color: $bg-light-hover-color;
+    }
+    
+    thead {
+        background: $bg-gray-color;
+        border-radius: 10px 10px 0px 0px;
+        color: $light-black-color;
+
+        tr>th {
+            white-space: nowrap;
+            padding: 0.8rem !important;
+            text-align: center !important;
+        }
+    }
+
+    .table-slug {
+        background: $light-orange-color;
+        border-radius: 10px;
+        padding: 10px;
+        color: $orange-color;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0;
+    }
+
+    .table-status {
+        min-width: 150px;
+
+        .table-active,
+        .table-no-active {
+            padding: 10px;
+            margin: 0;
+            background: $light-tur-color;
+            border-radius: 10px;
+            color: $tur-color;
+        }
+
+        .table-no-active {
+            color: $wine-color;
+            background: $light-wine-color;
+        }
+    }
+
+    .table-btn {
+        background: $bg-gray-color;
+        border-radius: 10px;
+        padding: 10px;
+        color: $dark-blue-color;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+
+        &:hover {
+            color: $bg-white-color;
+            background: $dark-blue-color;
+        }
+    }
+
+    .btn-option {
+        background: $light-wine-color;
+        color: $wine-color;
+
+        &:hover {
+            color: $bg-white-color;
+            background: $wine-color;
+        }
+    }
+
+    .active-span{
+        background-color: #EBF9F4;
+        color: #52BF97;
+        padding: 5px 5px;
+        border-radius: 8px;
+    }
+
+    .inactive-span{
+        background-color: #FFF0F5;
+        color: #BF4E6A;
+        padding: 5px 5px;
+        border-radius: 8px;
+    }
+
+    .list-image{
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        max-height: 80px;
+    }
+
+}
